@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 </head>
 <body id="page">
     <title>Jackson Harris</title>
-    <img src="./yak.JPG">
-    <h1>Styles!</h1>
-    <p>Feel free to click any of these links to see this webpage in a different style!</p>
-    <ul>
-        <li><a href="./more_pages/style1.html">Style 1</a></li>
-        <li><a href="./more_pages/style2.html">Style 2</a></li>
-        <li><a href="https://dartmouth-cs52-20s.github.io/lab1-landingpage-jacksontharris/">Style 3</a></li>
-    </ul>
+    <button id="styles_button">Styles</button>
+    <div id="styles">
+        <h1>Styles!</h1>
+        <p>Feel free to click any of these links to see this webpage in a different style!</p>
+        <ul>
+            <li><a href="./more_pages/style1.html">Style 1</a></li>
+            <li><a href="./more_pages/style2.html">Style 2</a></li>
+            <li><a href="https://dartmouth-cs52-20s.github.io/lab1-landingpage-jacksontharris/">Style 3</a></li>
+        </ul>  
+    </div>
     
-    <h1>About Me</h2>
-    <p>Hi there, my name is Jackson. I'm a student of Geography and Computer Science.</p>    
-    <h2>Interests</h2>
-    <p>I like trees, flowers, and <a href="https://www.youtube.com/watch?v=HdROJE-Ltpk">kayaking!</a></p>
-    <h2>Work</h2>
-    <p>Here are some things you can ask me for help with!</p>
-    <ul>
-        <li>Python</li>
-        <li>Woodworking</li>
-        <li>Guitar</li>
-    </ul>
-    <p>Here are some things I need help with!</p>
-    <ul>
-        <li>Personal growth</li>
-        <li>Redux</li>
-        <li>Guitar</li>
-    </ul>
+    
+    <button id="about_button">About</button>
+    <div id="about">
+        <h2>About Me</h2>
+        <p>Hi there, my name is Jackson. I'm a student of Geography and Computer Science.</p>   
+    </div>
+
+    <button id="interests_button">Interests</button>
+    <div id="interests">
+        <h2>Interests</h2>
+        <p>I like trees, flowers, and <a href="https://www.youtube.com/watch?v=HdROJE-Ltpk">kayaking!</a></p>
+    </div>
+     
+    <button id="work_button">Work</button>
+    <div id="work">
+        <h2>Work</h2>
+        <p>Here are some things you can ask me for help with!</p>
+        <ul>
+            <li>Python</li>
+            <li>Woodworking</li>
+            <li>Guitar</li>
+        </ul>
+        <p>Here are some things I need help with!</p>
+        <ul>
+            <li>Personal growth</li>
+            <li>Redux</li>
+            <li>Guitar</li>
+        </ul>
+    </div>
+    
     <h2>Contact Me</h2>
     <p>
         Feel free to ask me any questions!
@@ -39,5 +55,22 @@
         Inquiry: <input type="text">
     </p>
     <button>Submit</button>
+    <img src="./yak.JPG">
+    <script>
+        $(document).ready( function () {
+            $( "#styles_button" ).click( function() {
+                $( "#styles" ).toggle("slow");
+            });
+            $( "#about_button" ).click( function() {
+                $( "#about" ).toggle("slow");
+            });
+            $( "#interests_button" ).click( function() {
+                $( "#interests" ).toggle("slow");
+            });
+            $( "#work_button" ).click( function() {
+                $( "#work" ).toggle("slow");
+            });
+        })
+    </script>
 
 </body>
